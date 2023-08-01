@@ -10,7 +10,10 @@ public class Solution {
         int a = Integer.parseInt(st.nextToken());
         int b = Integer.parseInt(st.nextToken());
 
-        System.out.println("a = " + a);
-        System.out.println("b = " + b);
+        bw.write("a = " + a);
+        bw.write("\nb = " + b);
+        
+        bw.close();
+        br.close();
     }
 }
