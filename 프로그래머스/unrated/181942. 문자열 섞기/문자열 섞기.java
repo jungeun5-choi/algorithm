@@ -1,9 +1,9 @@
 class Solution {
     public String solution(String str1, String str2) {
-        String answer = "";
-        for(int i = 0; i < str1.length(); i++) {
-            answer = answer+str1.charAt(i)+str2.charAt(i);
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < str1.length(); i++) {
+            sb.append(str1.charAt(i)).append(str2.charAt(i));
         }
-        return answer;
+        return sb.toString();
     }
 }
