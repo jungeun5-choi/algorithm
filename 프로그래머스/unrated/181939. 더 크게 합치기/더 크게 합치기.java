@@ -9,7 +9,6 @@ class Solution {
         int num1 = Integer.parseInt(sb1.toString());
         int num2 = Integer.parseInt(sb2.toString());
         
-        if(num1 > num2) return num1;
-        else return num2;
+        return Math.max(num1, num2);
     }
 }
