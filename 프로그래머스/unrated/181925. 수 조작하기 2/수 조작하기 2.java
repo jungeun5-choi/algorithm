@@ -3,19 +3,17 @@ import java.util.stream.Collectors;
 
 class Solution {
     public String solution(int[] numLog) {
-        StringBuilder sb = new StringBuilder();
-        List<Integer> logs = Arrays.stream(numLog).boxed().collect(Collectors.toList());
-        
-        for (int i = 1; i < logs.size(); i++) {
-            if (compareTwo(logs, i) == 1) sb.append("w");
-            else if (compareTwo(logs, i) == -1) sb.append("s");
-            else if (compareTwo(logs, i) == 10) sb.append("d");
-            else  sb.append("a");
+        String str = "";
+        for (int i = 1; i < numLog.length; i++) {
+            if (compareTwo(numLog, i) == 1) str += "w";
+            else if (compareTwo(numLog, i) == -1) str += "s";
+            else if (compareTwo(numLog, i) == 10) str += "d";
+            else str += "a";
         }
-        return sb.toString();
+        return str;
     }
 
-    private int compareTwo(List<Integer> arr, int index) {
-        return arr.get(index) - arr.get(index - 1);
+    private int compareTwo(int[] arr, int index) {
+        return arr[index] - arr[index - 1];
     }
 }
