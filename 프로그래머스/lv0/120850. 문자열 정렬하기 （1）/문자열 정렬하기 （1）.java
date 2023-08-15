@@ -5,7 +5,7 @@ class Solution {
         my_string = my_string.replaceAll("[a-z,A-Z]", "");
         int[] answer = new int[my_string.length()];
         for (int i = 0; i < my_string.length(); i++) {
-            answer[i] = Integer.parseInt(String.valueOf(my_string.charAt(i)));
+            answer[i] = my_string.charAt(i) - '0';
         }
         Arrays.sort(answer);
         return answer;
