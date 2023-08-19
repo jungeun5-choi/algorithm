@@ -1,10 +1,9 @@
 class Solution {
     public int solution(int num, int k) {
-        String str = num + "";
-		for (int i = 0; i < str.length(); i++) {
-			int temp = str.charAt(i) - '0';
-			if(temp == k) return i + 1;
-		}
-		return -1;
+        String numStr = String.valueOf(num);
+        String kStr = String.valueOf(k);
+
+        int answer = numStr.indexOf(kStr);
+        return answer < 0 ? -1 : answer + 1 ;
     }
 }
