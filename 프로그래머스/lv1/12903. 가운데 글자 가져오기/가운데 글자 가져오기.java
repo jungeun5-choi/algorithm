@@ -1,14 +1,13 @@
 class Solution {
     public String solution(String s) {
-		String answer = "";
+		StringBuilder answer = new StringBuilder();
 		int s_length = s.length();
 		int s_center = s_length / 2;
 		if (s_length % 2 != 0) {
-			answer = s.charAt(s_center) + "";
+			answer.append(s.charAt(s_center));
 		} else {
-			answer = s.charAt(s_center - 1) + "";
-			answer += s.charAt(s_center) + "";
+			answer.append(s.charAt(s_center - 1)).append(s.charAt(s_center));
 		}
-		return answer;
+		return answer.toString();
 	}
 }
